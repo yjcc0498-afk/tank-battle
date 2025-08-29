@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; background: #0a0f16; color: #e6edf3; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+#ui { position: fixed; inset: 0 0 auto 0; display: flex; flex-direction: column; gap: 8px; padding: 12px; pointer-events: none; }
+.hud { display: flex; gap: 16px; align-items: center; pointer-events: auto; }
+.hud button { background: #1f2937; color: #e6edf3; border: 1px solid #334155; padding: 6px 10px; border-radius: 6px; cursor: pointer; }
+.hud button:hover { background: #263244; }
+.help { opacity: .8; font-size: 12px; }
+
+canvas#game { display: block; margin: 0 auto; background: var(--bg, #0b1220); border: 1px solid #1f2937; box-shadow: 0 0 0 2px #0b1220, 0 0 0 4px #0b172a; margin-top: 64px; }
+
+.overlay { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(3,6,12,.6); color: #e6edf3; font-size: 18px; }
+.overlay .panel { background: #0d1424; border: 1px solid #273449; border-radius: 12px; padding: 24px 28px; min-width: 320px; text-align: center; }
+.overlay .panel h1 { margin: 0 0 8px 0; font-size: 24px; }
+.overlay .panel .buttons { display: flex; gap: 12px; justify-content: center; margin-top: 12px; }
+.overlay .panel button { background: #1f2937; color: #e6edf3; border: 1px solid #334155; padding: 8px 14px; border-radius: 8px; cursor: pointer; }
+.overlay .panel button:hover { background: #263244; }
+
+/* Touch controls */
+#touch-controls { position: fixed; inset: auto 0 16px 0; display: flex; justify-content: space-between; align-items: flex-end; padding: 0 16px; pointer-events: none; }
+#joystick { position: relative; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); pointer-events: auto; touch-action: none; }
+#stick { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin-left: -28px; margin-top: -28px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); }
+#touch-controls #btn-fire { pointer-events: auto; background: #1f2937; color: #e6edf3; border: 1px solid #334155; padding: 18px 22px; border-radius: 50px; font-size: 16px; }
+
+/* Theme helpers (applied via canvas paint, but allow CSS vars for bg) */
+:root.grassland { --bg: #0e1a10; }
+:root.space { --bg: #080b16; }
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>坦克大战 - Tank Battle</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="ui">
+        <div class="hud">
+            <span>分数 Score: <strong id="score">0</strong></span>
+            <span>最高 High: <strong id="high">0</strong></span>
+            <span>生命 Lives: <strong id="lives">3</strong></span>
+            <span>波次 Wave: <strong id="wave">1</strong></span>
+            <span>最佳 Best: <strong id="best">1</strong></span>
+            <span>增益 Buff: <strong id="buff">无</strong></span>
+            <button id="btn-pause" title="P 或 Esc 暂停">暂停</button>
+            <button id="btn-restart">重开</button>
+            <button id="btn-theme" title="切换主题 草原/星际">主题: 草原</button>
+        </div>
+        <div class="help">WASD 移动，鼠标瞄准，点击射击。P/Esc 暂停。</div>
+    </div>
+
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <div id="touch-controls">
+        <div id="joystick">
+            <div id="stick"></div>
+        </div>
+        <button id="btn-fire">开火</button>
+    </div>
+
+    <script src="src/game.js"></script>
+</body>
+</html>
+
+
